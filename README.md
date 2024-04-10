@@ -1,7 +1,7 @@
 # ili9341_OPi5plus
-## Repo for driving the LCD display at 30FPS on an orange pi 5 plus
+## Repo for driving the LCD display at around 30FPS on an orange pi 5 plus
 
-As i scoured the internet to find a way to drive the lcd display on the orangepi 5 plus using SPI. I found some repo's but couldn't get them to work on my system (or at least not above 5FPS) so I made my own code based on spidev and wiringPi. This library can be used in python or in c. 
+As I scoured the internet to find a way to drive the lcd display on the orangepi 5 plus using SPI. I found some repo's but couldn't get them to work on my system (or at least not above 5FPS) so I made my own code based on spidev and wiringPi. This library can be used in python or in c. 
 
 ### How to use it
 In order to use this you need to connect your device as such that:
@@ -24,7 +24,8 @@ The ili9341.so file can then be called in python using the ctypes library. I wil
 
 ### Issues
 As of now, there are a few optimisations that can be added. If I do not add them soon, feel free to open an issue to remind me :).
-* Clearer explanation to install and use this library
+* Clearer and more complete explanation to install and use this library, including images of the steps
 * State of the art implementation in python
-* Process images and videos, like the HDMI input of the OPi5+
 * Add touchscreen support
+* Process images and videos, like the HDMI input of the OPi5+
+* Implementation of a simple, easy to use widgets that can be added on the screen: Labels, Buttons and Sliders on a FloatLayout
