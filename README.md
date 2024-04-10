@@ -16,9 +16,9 @@ In order to use this you need to connect your device as such that:
 * Pin 21 (WPi-counting) of the OPi5+ is connected to SDO<MISO> on the display
 
 After that, in C you can compile ili9341.c to a shared dll using the following command
-'''bash
+~~~bash
 gcc -shared -o ili9341.so ili9341.c -fPIC -lwiringPi
-'''
+~~~
 
 The ili9341.so file can then be called in python using the ctypes library. I will make a class that has these features pre-installed so you can use it in python.
 
