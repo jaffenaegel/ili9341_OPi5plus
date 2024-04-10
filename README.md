@@ -26,4 +26,5 @@ The ili9341.so file can then be called in python using the ctypes library. I wil
 As of now, there are a few optimisations that can be added. If I do not add them soon, feel free to open an issue to remind me :).
 * Clearer explanation to install and use this library
 * State of the art implementation in python
-* process images and videos, like the HDMI input of the OPi5+
+* Process images and videos, like the HDMI input of the OPi5+
+* Add touchscreen support
