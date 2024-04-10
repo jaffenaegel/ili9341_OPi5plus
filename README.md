@@ -1,7 +1,11 @@
 # ili9341_OPi5plus
 ## Repo for driving the LCD display at around 30FPS on an orange pi 5 plus
 
-As I scoured the internet to find a way to drive the lcd display on the orangepi 5 plus using SPI. I found some repo's but couldn't get them to work on my system (or at least not above 5FPS) so I made my own code based on spidev and wiringPi. This library can be used in python or in c. 
+As I scoured the internet to find a way to drive the lcd display on the orangepi 5 plus using SPI. I found some repo's but couldn't get them to work on my system so I made my own code based on spidev and wiringPi. This library can be used in python or in c. 
+
+The only repo that worked for me was this one: https://github.com/sonocotta/ili9341-orangepi-python/tree/master
+
+However, I did not get the performance I wanted, I could only get up to around 5FPS, so I decided to rewrite it in c in the hope that it would be better. The final result reaches around 30FPS.
 
 ### How to use it
 In order to use this you need to connect your device as such that:
@@ -14,6 +18,10 @@ In order to use this you need to connect your device as such that:
 * Pin 23 (WPi-counting) of the OPi5+ is connected to SCK on the display
 * Pin 4 (WPi-counting) of the OPi5+ is connected to LED on the display
 * Pin 21 (WPi-counting) of the OPi5+ is connected to SDO<MISO> on the display
+
+Make sure you have the requirements installed: WiringPi (usually already installed) as well as enabled spidev0.0 M2 on your system. 
+
+For python you will also need to install numpy and pillow. 
 
 After that, in C you can compile ili9341.c to a shared dll using the following command
 ~~~bash
