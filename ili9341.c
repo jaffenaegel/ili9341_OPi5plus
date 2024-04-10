@@ -49,7 +49,7 @@ static void Send(uint8_t *tx_buffer, size_t size)
     {
         size_t chunk_size = (size - i < 4096) ? (size - i) : 4096;
         struct spi_ioc_transfer transfer = {
-            .tx_buf = (unsigned long)tx_buffer,
+            .tx_buf = (unsigned long)&tx_buffer[i],
             .rx_buf = 0,
             .len = chunk_size,
             .speed_hz = SPI_SPEED_HZ,
